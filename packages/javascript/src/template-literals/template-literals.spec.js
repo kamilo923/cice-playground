@@ -1,4 +1,11 @@
 describe('template literals', () => {
+  it('should interpolate values with plus', () => {
+    const given = 'bar'
+    const actual = 'foo' + given + '\n' + given + 'baz'
+
+    expect(actual).toBe('foobar\nbarbaz')
+  })
+
   it('should handle multiline', () => {
     const actual = `lorem
 ipsum
@@ -26,7 +33,7 @@ dolor
   })
 
   it('should handle being executed as a function', () => {
-    const taggedTemplates = (strings: TemplateStringsArray, ...values: string[]) => {
+    const taggedTemplates = (strings, ...values) => {
       let str = ''
       strings.forEach((string, i) => {
         str += string + (values[i] ?? '').toUpperCase()
