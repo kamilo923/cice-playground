@@ -36,5 +36,8 @@
     "*.{js,ts,html,json,css,scss,md,yaml}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "snowpack": "^2.18.5"
   }
 }
