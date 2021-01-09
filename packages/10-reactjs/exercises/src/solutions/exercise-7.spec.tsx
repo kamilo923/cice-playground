@@ -1,13 +1,17 @@
-import { ExerciseSeven } from './exercise-seven'
+import { Exercise7 } from './exercise-7'
 import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 
 describe('ExerciseSeven', () => {
   it('should make a request to the pokemon API', async () => {
-    spyOn(window, 'fetch').and.returnValue(
-      Promise.resolve({ json: () => Promise.resolve({ results: [{ name: 'Pikachu' }] }) })
-    )
-    const { queryByRole } = render(<ExerciseSeven />)
+    jest
+      .spyOn(window, 'fetch')
+      .mockReturnValue(
+        Promise.resolve({
+          json: () => Promise.resolve({ results: [{ name: 'Pikachu' }] })
+        }) as Promise<Response>
+      )
+    const { queryByRole } = render(<Exercise7 />)
 
     await waitFor(() => queryByRole('listitem'))
 

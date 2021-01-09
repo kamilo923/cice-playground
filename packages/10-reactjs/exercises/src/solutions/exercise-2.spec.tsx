@@ -1,17 +1,16 @@
-import React from 'react'
-import { ExerciseTwo } from './exercise-two'
+import { Exercise2 } from './exercise-2'
 import { render, fireEvent } from '@testing-library/react'
 
 describe('ExerciseTwo', () => {
   it('should have an initial state', () => {
-    const { getByRole } = render(<ExerciseTwo />)
+    const { getByRole } = render(<Exercise2 />)
     const button = getByRole('button')
 
     expect(button).toHaveTextContent('0')
   })
 
   it('should update the counter', () => {
-    const { getByRole } = render(<ExerciseTwo />)
+    const { getByRole } = render(<Exercise2 />)
     const button = getByRole('button')
 
     fireEvent.click(button)
@@ -20,7 +19,7 @@ describe('ExerciseTwo', () => {
   })
 
   it('should update the counter when clicking more than once', () => {
-    const { getByRole } = render(<ExerciseTwo />)
+    const { getByRole } = render(<Exercise2 />)
     const button = getByRole('button')
 
     fireEvent.click(button)

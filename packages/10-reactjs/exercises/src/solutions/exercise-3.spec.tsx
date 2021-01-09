@@ -1,10 +1,9 @@
-import { ExerciseThree } from './exercise-three'
+import { Exercise3 } from './exercise-3'
 import { render, fireEvent } from '@testing-library/react'
-import React from 'react'
 
 describe('ExerciseThree', () => {
   it('should not include a vowel when typing in the input', () => {
-    const { getByLabelText } = render(<ExerciseThree />)
+    const { getByLabelText } = render(<Exercise3 />)
 
     const input = getByLabelText('Input')
 
@@ -14,7 +13,7 @@ describe('ExerciseThree', () => {
   })
 
   it('should include a consontants when typing in the input', () => {
-    const { getByLabelText } = render(<ExerciseThree />)
+    const { getByLabelText } = render(<Exercise3 />)
 
     const input = getByLabelText('Input')
 
@@ -24,7 +23,7 @@ describe('ExerciseThree', () => {
   })
 
   it('should filter out vowels from word when typing', () => {
-    const { getByLabelText } = render(<ExerciseThree />)
+    const { getByLabelText } = render(<Exercise3 />)
 
     const input = getByLabelText('Input')
 
