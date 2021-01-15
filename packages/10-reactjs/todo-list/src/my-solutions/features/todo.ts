@@ -1,5 +1,5 @@
-export interface myTodo {
-  id: number;
-  text: string;
-  complete: boolean;
+export interface Todo {
+  id: number
+  text: string
+  completed: boolean
 }
