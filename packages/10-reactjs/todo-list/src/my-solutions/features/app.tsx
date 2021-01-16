@@ -59,7 +59,7 @@ export const App: FC = () => {
             createTodo()
           }}
         >
-          <strong>Create todo</strong>
+          <strong>Agregar Todo</strong>
         </Button>
       </header>
       <ul>
