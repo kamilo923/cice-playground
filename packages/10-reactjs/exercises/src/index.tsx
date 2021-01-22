@@ -1,12 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-
-/*import { App } from './solutions/app'*/
-import { Myapp } from './my-solutions/Myapp'
-import { reportWebVitals } from './report-web-vitals'
-
 import { App } from './solutions/app'
+// import { Myapp } from './my-solutions/Myapp'
 
 
 ReactDOM.render(
@@ -14,7 +10,7 @@ ReactDOM.render(
 {/*
     <App />
 */}
-    <Myapp />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )
