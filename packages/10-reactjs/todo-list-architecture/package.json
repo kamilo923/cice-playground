@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "storybook": "start-storybook -p 9009 -s public",
@@ -50,6 +50,7 @@
     "@storybook/preset-create-react-app": "3.1.5",
     "@storybook/react": "6.1.14",
     "@types/classnames": "2.2.11",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "ts-mockito": "2.6.1"
   }
 }
